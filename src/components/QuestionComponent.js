@@ -28,8 +28,9 @@ class QuestionComponent extends React.Component{
     if(isAlltrue){
       this.setState({
         status: "Answer is CORRECT",
-        imageSrc: this.state.questionnaire.answerImageURL
+        imageSrc: this.state.questionnaire.answerImageURL,
       });
+      document.getElementsByClassName("main-app")[0].style.background = 'yellow';
     }
   }
 
@@ -104,7 +105,7 @@ class QuestionComponent extends React.Component{
           {this.renderChoices()} 
           <div className="status">{this.state.status}</div>       
         </div>  
-        <img src={this.state.imageSrc} width="50%"/>  
+        <img alt="" src={this.state.imageSrc} width="50%"/>  
       </div>            
     );        
   }
