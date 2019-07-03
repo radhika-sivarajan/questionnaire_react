@@ -77,7 +77,7 @@ class QuestionComponent extends React.Component{
                                     onChange={this.handleChange}
 					                // checked={!this.state.toggle}
                                     />
-                                    <label htmlFor={option +"-"+ i} >{answer}</label>
+                                    <label className={"label"+ i}  htmlFor={option +"-"+ i} >{answer}</label>
                                 </span>  
                             )    
                         })
