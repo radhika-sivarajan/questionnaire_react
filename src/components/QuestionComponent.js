@@ -12,6 +12,7 @@ class QuestionComponent extends React.Component{
       status: "Answer is Incorrect",
       imageSrc: "",
       color: "#fd6844a3",
+      lockForm: false,
     };
     this.toggleBg = this.toggleBg.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -19,7 +20,7 @@ class QuestionComponent extends React.Component{
   }
 
   toggleBg() {
-    var newColor = this.state.color === "#fd6844a3" ? "#4caf508c" : "#fd6844a3";
+    var newColor = this.state.color === "#fd6844a3" ? "#f1e583" : "#fd6844a3";
     this.setState({color: newColor});
   }
   
@@ -29,8 +30,9 @@ class QuestionComponent extends React.Component{
       this.setState({
         status: "Answer is CORRECT",
         imageSrc: this.state.questionnaire.answerImageURL,
+        lockForm: true,
+        color: "#0fa597",
       });
-      document.getElementsByClassName("main-app")[0].style.background = 'yellow';
     }
   }
 
@@ -81,6 +83,7 @@ class QuestionComponent extends React.Component{
                   name = {option} 
                   value = {quChoices[option][answer]} 
                   onChange={this.handleChange}
+                  disabled={this.state.lockForm}
                   />
                   <label className={"label"+ i}  htmlFor={option +"-"+ i} >{answer}</label>
                 </span>  
