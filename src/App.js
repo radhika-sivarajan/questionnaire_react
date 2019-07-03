@@ -21,7 +21,8 @@ const problem = {
       "Cellulose" : false,
       "Mitochondria" : true
     }
-  }
+  },
+  answerImageURL : "",
 };
 
 class App extends React.Component{
