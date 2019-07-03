@@ -6,23 +6,23 @@ const problem = {
   question: "An animal cell contain",
   choices: {
     option1: {
-      "Cell wall" : true,
-      "Ribosome" : false,
+      "Cell wall" : false,
+      "Ribosome" : true,
     },
     option2: {
       "Cytoplasm" : true,
       "Chloroplast" : false,
     },
     option3: {
-      "Partially permeable membrane" : true,
-      "Impermeable membrane" : false,
+      "Lysosome" : true,
+      "Plasmodesmata" : false,
     },
     option4: {
       "Cellulose" : false,
       "Mitochondria" : true
     }
   },
-  answerImageURL : "",
+  answerImageURL : "https://i.imgur.com/wzQzslM.png",
 };
 
 class App extends React.Component{
@@ -33,7 +33,7 @@ class App extends React.Component{
   render() {   
     return (
       <div className="App">
-          <QuestionComponent inputQuestionnaire={this.state}/>
+        <QuestionComponent inputQuestionnaire={this.state}/>
       </div>
     );
   }
