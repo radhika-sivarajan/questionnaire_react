@@ -4,7 +4,7 @@ import QuestionComponent from './components/QuestionComponent';
 
 const problem = {
   question: "An animal cell contain",
-  choices: {
+  options: {
     option1: {
       "Cell wall" : false,
       "Ribosome" : true,
