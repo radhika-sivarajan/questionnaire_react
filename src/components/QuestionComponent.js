@@ -9,7 +9,7 @@ class QuestionComponent extends React.Component{
     this.state = {
       questionnaire : this.props.inputQuestionnaire,
       selectedOptions : {},
-      status: "Answer is Incorrect",
+      status: "",
       imageSrc: "",
       color: "#fd6844a3",
       lockForm: false,
@@ -17,6 +17,10 @@ class QuestionComponent extends React.Component{
     this.toggleBg = this.toggleBg.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({status: "Answer is Incorrect",});
   }
 
   toggleBg() {
